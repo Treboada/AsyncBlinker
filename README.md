@@ -28,8 +28,8 @@ Examples index:
 
 ### Define a callback function to switch ON or OFF
 
-You must code the blink action with a function that receives the blink state
-as a boolean parameter:
+You must code the __blink action__ with a function that receives the blink 
+state as a boolean parameter:
 
         void blink_my_led(bool enable) {
             digitalWrite(PIN_LED, enable ? HIGH : LOW);
@@ -37,21 +37,21 @@ as a boolean parameter:
 
 ### AsyncBlinker instance
 
-Declare the instance controlling the blinking and initialize with your
+Declare the __instance__ controlling the blinking and initialize with your
 callback function:
 
         AsyncBlinker blinker(blink_my_led);
 
 ### Call the non-blocking update
 
-Be sure that your main loop calls to the `tickUpdate()` method of the instance 
-to update the blinker status. It is necessary to specify the elapsed
+Be sure that your main loop calls to the __`tickUpdate()` method__ of the 
+instance to update the blinker status. It is necessary to specify the elapsed
 milliseconds from the last call:
 
         blinker.tickUpdate(elapsed_millis);
 
 See in the [__SimpleBlink__ example][EXA01] how to calculate the elapsed time 
-in the mail loop.
+in the main loop.
 
 ### Define blinking intervals
 
@@ -68,9 +68,8 @@ or OFF:
         // peaceful blink (20ms ON and 5s OFF):
         uint16_t background_signal[] = { 20, 5000 };
 
-With 3 or more intervals, the first interval is the milliseconds to keep
-ON, second interval is to keep OFF, third one to keep OFF, fourth to keep
-ON and so on...
+The first interval is the milliseconds to keep ON, second interval is to keep 
+OFF, third one to keep OFF, fourth to keep ON and so on...
 
         // Morse 'O' (---) and 'S' (...)
         uint16_t morse_o[] = { 900, 300, 900, 300, 900, 300 };
@@ -81,8 +80,8 @@ skip it.
 
 ### Set the blinking intervals
 
-Call `setIntervals(const uint16_t* intervals, uint8_t count)` method passing 
-the array defining the intervals and the number of elements in the array.
+Call __`setIntervals()` method__ passing the array defining the intervals and 
+the number of elements in the array:
 
         AsyncBlinker blinker(blink_my_led);
         uint16_t fast_blink[] = { 200, 200 };
@@ -97,7 +96,8 @@ length in bytes of each *uint16\_t* element) to pass the elements count:
 ### Limit the cycles
 
 By default it cycles intervals endlessly from the first to the last and
-restarting with the first again. You can limit to a number of cycles (1-254):
+restarting with the first again. You can limit to a number of cycles (1-254)
+passing it as the __first parameter of `start()`__ function:
 
         AsyncBlinker blinker(blink_my_led);
         blinker.start(5); // blinks 5 times
@@ -105,7 +105,7 @@ restarting with the first again. You can limit to a number of cycles (1-254):
 The default 'endlessly' mode can be specified as:
 
         AsyncBlinker blinker(blink_my_led);
-        blinker.start(AsyncBlinkder::ENDLESSLY); 
+        blinker.start(AsyncBlinker::ENDLESSLY); 
 
 ### Use sub-intervals
 
