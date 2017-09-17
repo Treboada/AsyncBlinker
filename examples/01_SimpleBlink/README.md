@@ -24,23 +24,23 @@ in an Arduino Uno board.
 
 This example shows how to:
 
-1. Write a callback function that switches a LED:
+1. Write a __callback function__ that switches a LED:
 
-    void blink_my_led(bool enable) {
-        digitalWrite(PIN_LED, enable ? HIGH : LOW);
-    }
+        void blink_my_led(bool enable) {
+            digitalWrite(PIN_LED, enable ? HIGH : LOW);
+        }
 
-2. Declare the AsyncBlinker instance to execute the callback function:
+2. Declare the __AsyncBlinker instance__ to execute the callback function:
 
-    AsyncBlinker blinker(blink_my_led);
+        AsyncBlinker blinker(blink_my_led);
 
-3. Indicate to the AsyncBlinker to start the blinking:
+3. Indicate to the AsyncBlinker to __start the blinking__:
 
-    blinker.start();
+        blinker.start();
 
-4. Execute the non-blocking code in the main loop to blink the led:
+4. Execute the non-blocking __code in the main loop__ to blink the led:
 
-    blinker.tickUpdate(elapsed_millis);
+        blinker.tickUpdate(elapsed_millis);
 
 ## Code notes
 
@@ -48,10 +48,10 @@ This example shows how to:
 
 The code also shows how to get the system time and calculate the elapsed milliseconds in the main loop of the Arduino framework:
 
-    static unsigned long last_millis = 0;
-    unsigned long now_millis = millis();
-    unsigned long elapsed_millis = now_millis - last_millis;
-    last_millis = now_millis;
+        static unsigned long last_millis = 0;
+        unsigned long now_millis = millis();
+        unsigned long elapsed_millis = now_millis - last_millis;
+        last_millis = now_millis;
 
 ### Default blinking time intervals
 
