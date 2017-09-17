@@ -98,15 +98,15 @@ length in bytes of each *uint16\_t* element) to pass the elements count:
 Call `start()` and `stop()` methods in any part of your code to control the 
 blinking:
 
-	// something was changed its state:
+        // something was changed its state:
         switch (new_state) {
-	    case: STATE_WIFI_ON: blinker.start(); break;
-	    case: STATE_WIFI_OFF: blinker.stop(); break;
-	}
+            case: STATE_WIFI_ON: blinker.start(); break;
+            case: STATE_WIFI_OFF: blinker.stop(); break;
+        }
 
 Note: the method `setIntervals()` always stops the blinker.
 
-You can test if the blinker is stopped with the method `isStopped()`:
+You can test if the blinker is stopped with the `isStopped()` method:
 
         if (blinker.isStopped()) blinker.start();
 
