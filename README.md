@@ -1,6 +1,6 @@
 # AsyncBlinker library
 
-![Travis status](https://travis-ci.org/Treboada/AsyncBlinker.svg?branch=master)
+[![Travis status](https://travis-ci.org/Treboada/AsyncBlinker.svg?branch=master)](https://travis-ci.org/Treboada/AsyncBlinker)
 
 __Non-blocking C library to manage a blinking device__ (for example, a LED)
 changing the state in ON-OFF time intervals. 
