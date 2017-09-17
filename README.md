@@ -11,7 +11,10 @@ changing the state in ON-OFF time intervals.
 
 ## Library usage
 
-1. [__SimpleBlink__](examples/01_SimpleBlink) Minimal use of AsyncBlinker to blink the built-in LED in an _Arduino Uno_ board.
+1. [__SimpleBlink__](examples/01_SimpleBlink) Minimal code to blink the 
+   built-in LED in _Arduino Uno_ board. 
+
+Minimal use of AsyncBlinker to blink the built-in LED in an _Arduino Uno_ board.
 
 ## License
 

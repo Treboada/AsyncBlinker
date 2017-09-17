@@ -1,7 +1,7 @@
 # Simple Blink example
 
-This example shows the minimal use of AsyncBlinker to blink the built-in LED
-in an Arduino Uno board.
+This example shows the minimal code to blink the built-in LED in _Arduino Uno_ 
+board.
 
 - [__src__](src) Sources directory
     - [__Main.cpp__](src/Main.cpp) Main program
@@ -44,9 +44,18 @@ This example shows how to:
 
 ## Code notes
 
+### Another yet blink example?
+
+Yes! But this blink is non-blocking (no delays). You can do more things in the
+main loop and the blinking continues.
+
+Of course, you mustn't use another code blocking the execution (delaying) or
+the blinker won't update the state...
+
 ### Elapsed time in the Arduino framework
 
-The code also shows how to get the system time and calculate the elapsed milliseconds in the main loop of the Arduino framework:
+The code also shows how to get the system time and calculate the elapsed 
+milliseconds in the main loop of the Arduino framework:
 
         static unsigned long last_millis = 0;
         unsigned long now_millis = millis();
