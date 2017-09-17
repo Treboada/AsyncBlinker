@@ -70,13 +70,12 @@ This example is using the default blinking behaviour:
 2. 500 ms disable
 3. start again
 
-Go to example [02\_BlinkingIntervals][EXA02] and learn about blinking
-intervals.
+Go to [next example][EXA02] and learn about blinking intervals.
 
 
 
 [ARD01]: https://www.arduino.cc/en/Main/Software
 [LIB01]: https://github.com/Treboada/AsyncBlinker/archive/master.zip
-[EXA02]: ../02_BlinkingIntervals
+[EXA02]: #
 [PIO01]: http://docs.platformio.org/en/latest/installation.html
 
