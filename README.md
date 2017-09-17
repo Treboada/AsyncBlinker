@@ -2,7 +2,7 @@
 
 [![Travis status](https://travis-ci.org/Treboada/AsyncBlinker.svg?branch=master)](https://travis-ci.org/Treboada/AsyncBlinker)
 
-__Non-blocking C library to manage blinking devices__ (for example, a LED)
+__Non-blocking C/C++ library to manage blinking devices__ (for example, a LED)
 changing the state in ON-OFF time intervals. 
 
 - __Tags__: library, C, C++, blink, LED, non-blocking, asynchronous, threads, delay
@@ -93,6 +93,24 @@ length in bytes of each *uint16\_t* element) to pass the elements count:
 
         blinker.setIntervals(fast_blink, sizeof(fast_blink) / 2);
 
+### Start and stop the blinker
+
+Call `start()` and `stop()` methods in any part of your code to control the 
+blinking:
+
+	// something was changed its state:
+        switch (new_state) {
+	    case: STATE_WIFI_ON: blinker.start(); break;
+	    case: STATE_WIFI_OFF: blinker.stop(); break;
+	}
+
+Note: the method `setIntervals()` always stops the blinker.
+
+You can test if the blinker is stopped with the method `isStopped()`:
+
+        if (blinker.isStopped()) blinker.start();
+
+
 ### Limit the cycles
 
 By default it cycles intervals endlessly from the first to the last and
@@ -106,6 +124,10 @@ The default 'endlessly' mode can be specified as:
 
         AsyncBlinker blinker(blink_my_led);
         blinker.start(AsyncBlinker::ENDLESSLY); 
+
+Tip: `tickUpdate()` method (executing in the main loop) returns if the blinker
+was stopped, so you can make any decision there when the blinker stops the
+cycles.
 
 ### Use sub-intervals
 

@@ -2,7 +2,7 @@
  *
  * AsyncBlinker implementation.
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author Rafa Couto <caligari@treboada.net>
  * @license GNU General Public License v3.0
  * @see https://github.com/Treboada/AsyncBlinker

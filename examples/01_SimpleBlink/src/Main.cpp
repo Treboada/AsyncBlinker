@@ -2,7 +2,6 @@
  *
  * Main program for 'Simple Blink' example.
  *
- * @version 1.0.0
  * @author Rafa Couto <caligari@treboada.net>
  * @license GNU General Public License v3.0
  * @see https://github.com/Treboada/AsyncBlinker

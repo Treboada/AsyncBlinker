@@ -2,7 +2,7 @@
  *
  * AsyncBlinker class.
  *
- * @version 1.0.0
+ * @version 1.0.1
  * @author Rafa Couto <caligari@treboada.net>
  * @license GNU General Public License v3.0
  * @see https://github.com/Treboada/AsyncBlinker
@@ -38,6 +38,7 @@ class AsyncBlinker
         void start() { start(ENDLESSLY); }
 
         void stop();
+        bool isStopped() { return (_cycles == 0); }
 
         bool tickUpdate(uint32_t elapsed_millis);
 
