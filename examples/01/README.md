@@ -3,8 +3,7 @@
 This example shows the minimal code to blink the built-in LED in _Arduino Uno_ 
 board.
 
-- [__src__](src) Sources directory
-    - [__Main.cpp__](src/Main.cpp) Main program
+- [__SimpleBlink.cpp__](SimpleBlink.cpp) Main program
 
 ## Execute
 
