@@ -134,7 +134,7 @@ cycles.
 -ToDo-
 
 
-[EXA01]: examples/01_SimpleBlink
+[EXA01]: examples/01
 [EXA02]: #
 
 

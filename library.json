@@ -1,7 +1,7 @@
 {
 	"name": "AsyncBlinker",
-	"version": "1.0.0",
-	"keywords": "library, C, C++, blink, LED, non-blocking, asynchronous, threads, delay",
+	"version": "1.0.1",
+	"keywords": "C, C++, blink, LED, non-blocking, asynchronous, threads, delay",
 	"description": "Non-blocking C/C++ library to manage blinking devices (for example, a LED) changing the state in ON-OFF time intervals.",
 	"license": "GPL-3.0",
 	"homepage": "https://github.com/Treboada/AsyncBlinker",
