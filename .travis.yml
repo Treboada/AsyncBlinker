@@ -11,5 +11,5 @@ install:
     - pip install -U platformio
 
 script:
-    - platformio run -d examples/01_SimpleBlink
+    - platformio run -d examples/01
 
